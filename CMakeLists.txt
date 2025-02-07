@@ -15,6 +15,8 @@ FetchContent_MakeAvailable(spdlog)
 
 add_library(Winterfell STATIC
   src/winterfell.cpp)
+add_library(winterfell::winterfell ALIAS Winterfell)
+
 
 target_include_directories(Winterfell
   PUBLIC include)
