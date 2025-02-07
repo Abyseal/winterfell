@@ -24,7 +24,7 @@ target_link_libraries(Winterfell PUBLIC spdlog::spdlog)
 
 add_library(winterfell::winterfell ALIAS Winterfell)
 
-install(TARGETS winterfell:winterfell
+install(TARGETS winterfell::winterfell
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin)
