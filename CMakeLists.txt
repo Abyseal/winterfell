@@ -3,13 +3,15 @@ project(Winterfell
   VERSION 1.0
   LANGUAGES CXX)
 
+
 include(FetchContent)
 FetchContent_Declare(
-  spdlog
-  GIT_REPOSITORY https://github.com/gabime/spdlog.git
-  GIT_TAG v1.11.0
+        spdlog
+        URL https://github.com/gabime/spdlog/archive/refs/tags/v1.13.0.zip
 )
+
 FetchContent_MakeAvailable(spdlog)
+
 
 add_library(Winterfell STATIC
   src/winterfell.cpp)
