@@ -15,14 +15,16 @@ FetchContent_MakeAvailable(spdlog)
 
 add_library(Winterfell STATIC
   src/winterfell.cpp)
-add_library(winterfell::winterfell ALIAS Winterfell)
+
 
 
 target_include_directories(Winterfell
   PUBLIC include)
 target_link_libraries(Winterfell PUBLIC spdlog::spdlog)
 
-install(TARGETS Winterfell
+add_library(winterfell::winterfell ALIAS Winterfell)
+
+install(TARGETS winterfell:winterfell
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin)
